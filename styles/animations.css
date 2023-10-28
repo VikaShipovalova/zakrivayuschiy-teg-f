@@ -59,17 +59,11 @@
 
 .like-icon.like-icon.is-liked .heart {
   transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  transform-origin: center;
-}
-
-.like-icon.like-icon.is-liked .heart {
   animation: heart_animation 0.3s ease-in 0.1s 1;
 }
 
 .like-icon.is-liked .sparks {
+  transform-origin: center;
   animation: heart_sparks 0.3s ease-in 0.3s 1;
 }
 
