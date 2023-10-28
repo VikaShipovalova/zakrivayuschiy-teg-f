@@ -14,19 +14,55 @@
 */
 
 .theme-menu__button:disabled::before {
-  animation: arrow_menu 0.5s ease-in-out infinite;
+  animation: arrow_menu 0.5s ease-in-out infinite reverse;
 }
 
 @keyframes arrow_menu {
   0% {
     transform: translateX(-4px);
   }
-  50% {
+  100% {
     transform: translateX(4px);
   }
-  100% {
-    transform: translateX(-4px);
-  }
+}
+
+/*состояния сердца*/
+.like-icon .contour {
+  fill: var(--heart-contour-color, #000);
+  transition: fill 0.1s 0s linear;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition-delay: 0.03s;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition-delay: 0s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-sparks-color, #ff0000);
+  transition: fill 0.3s 0s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-sparks-color, #ff0000);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-sparks-color, #ff0000);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.like-icon.is-liked .heart {
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
 }
 
 .like-icon.like-icon.is-liked .heart {
